@@ -31,19 +31,30 @@
       .el--8 {
         background-color: crimson;
       }
+      .el--2 {
+        grid-column: 1/2;
+        grid-row: 1 /3;
+      }
 
       .container--1 {
         /* STARTER */
         font-family: sans-serif;
         background-color: #ddd;
-        font-size: 40px;
+        font-size: 30px;
         margin: 40px;
 
         /* CSS GRID */
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        /* gap: 30px; */
+        column-gap: 10px;
+        row-gap: 40px;
       }
 
       .container--2 {
         /* STARTER */
+        display: none;
         font-family: sans-serif;
         background-color: black;
         font-size: 40px;
@@ -53,6 +64,45 @@
         height: 600px;
 
         /* CSS GRID */
+      }
+
+      /* CSS GRID PRACTICE START */
+      .cssGrid-practice {
+        box-sizing: border-box;
+        background-color: grey;
+        width: 500px;
+        height: 250px;
+        display: grid;
+        margin: 40px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        row-gap: 24px;
+        column-gap: 15px;
+        padding: 15px;
+      }
+
+      .red {
+        background-color: red;
+      }
+      .pink {
+        background-color: pink;
+        /* grid-column: 1 / span 2; */
+        grid-column: 1 / -1;
+        grid-row: 2/3;
+      }
+      .yellow {
+        background-color: yellow;
+        grid-column: 2 / 3;
+        grid-row: 1/4;
+      }
+      .orange {
+        background-color: orange;
+      }
+      .coral {
+        background-color: coral;
+      }
+      .crimson {
+        background-color: crimson;
       }
     </style>
   </head>
@@ -65,7 +115,7 @@
       <div class="el el--5">(5) amazing</div>
       <div class="el el--6">(6) languages</div>
       <div class="el el--7">(7) to</div>
-      <div class="el el--8">(8) learn</div>
+      <!-- <div class="el el--8">(8) learn</div> -->
     </div>
 
     <div class="container--2">
@@ -75,6 +125,16 @@
       <div class="el el--5">(5)</div>
       <div class="el el--6">(6)</div>
       <div class="el el--7">(7)</div>
+    </div>
+
+    <!-- CSS GRID PRACTICE START  -->
+    <div class="cssGrid-practice">
+      <div class="color red">I</div>
+      <div class="color pink">am</div>
+      <div class="color yellow">a</div>
+      <div class="color orange">skillful</div>
+      <div class="color coral">developer</div>
+      <div class="color crimson">👌</div>
     </div>
   </body>
 </html>
