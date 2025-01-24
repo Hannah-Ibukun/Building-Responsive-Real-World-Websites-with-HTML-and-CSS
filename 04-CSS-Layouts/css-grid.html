@@ -38,6 +38,7 @@
 
       .container--1 {
         /* STARTER */
+        display: none;
         font-family: sans-serif;
         background-color: #ddd;
         font-size: 30px;
@@ -54,16 +55,30 @@
 
       .container--2 {
         /* STARTER */
-        display: none;
+
         font-family: sans-serif;
         background-color: black;
         font-size: 40px;
         margin: 100px;
 
-        width: 1000px;
+        width: 700px;
         height: 600px;
 
         /* CSS GRID */
+        display: grid;
+        grid-template-columns: 125px 200px 125px;
+        grid-template-rows: 250px 100px;
+        gap: 50px;
+        /* Aligning tracks inside container:
+              distribute empty space */
+        justify-content: center;
+        /* justify-content: space-between; */
+
+        align-content: center;
+        /* Aligning items inside cells: Moving items 
+        inside the cells */
+        align-items: center;
+        justify-items: center;
       }
 
       /* CSS GRID PRACTICE START */
@@ -83,6 +98,8 @@
 
       .red {
         background-color: red;
+        align-items: center;
+        justify-items: center;
       }
       .pink {
         background-color: pink;
@@ -104,6 +121,7 @@
       .crimson {
         background-color: crimson;
       }
+      /* CSS GRID PRACTICE END */
     </style>
   </head>
   <body>
